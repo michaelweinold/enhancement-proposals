@@ -9,12 +9,12 @@
 | Proposed By | [Michael Weinold](mailto:dev@weinold.ch) |
 | Editor | [Tomas Navarrete Gutierrez](mailto:tomas.navarrete@list.lu) |
 | Created | 2022-11-14 |
-| Last updated | 2023-12-13 |
-| Version | 4 |
+| Last updated | 2025-03-24 |
+| Version | 5 |
 
 ## Abstract
 
-In order for the new documentation (compare BEP-0003) to provide users with a single place to get information on _"what's new"_ with Brightway, every Brightway repository (including the below listed) shall include a `CHANGES.md` markdown file. The file content shall adhere to best practices laid out by the [`keep a changelog`](https://keepachangelog.com/en/1.0.0/) project and conform to [Semantic Versioning > 2.0.0](https://semver.org/).
+The Brightway documentation (compare [BEP-0003](https://github.com/brightway-lca/enhancement-proposals/blob/main/proposals/0003_documentation.md)) should provide users with a single place to get information on _"what's new"_ with Brightway. Therefore, every Brightway repository (including the below listed) shall include a `CHANGES.md` markdown file. The file content shall adhere to best practices laid out by the [`keep a changelog`](https://keepachangelog.com/en/1.0.0/) project and conform to [Semantic Versioning > 2.0.0](https://semver.org/).
 
 ## Motivation
 
@@ -32,7 +32,11 @@ In order for the new documentation (compare BEP-0003) to provide users with a si
 | `regional` | https://github.com/brightway-lca/brightway2-regional/blob/master/CHANGES.md |
 | `regional` | https://github.com/brightway-lca/bw_migrations/blob/master/CHANGELOG.md |
 
-Unifying the file names, syntax and best practices will enable these changelog files to be included in the new Brightway documentation.
+Even when information was written to these files, the addition or removal (!) of public functions was not always documented. [1]
+
+Unifying the file names, syntax and change-documentation-requirements will enable these changelog files to be included in the new Brightway documentation.
+
+[1] For example, `bi.useeio11` was removed between commit [`5d37d0a`](https://github.com/brightway-lca/brightway2-io/blob/5d37d0a81b2f2e2b1abeaac52241af66d6b3ee19/bw2io/__init__.py) and [`56598df`](https://github.com/brightway-lca/brightway2-io/blob/56598df8f813563ffbde788436d32353733384a5/bw2io/__init__.py) in the `brightway2-io` repository, but this change was not documented in the changelog file. Users have to painstakingly go through the commit history to find out about such changes.
 
 ## Proposal
 
@@ -93,11 +97,11 @@ Unless BEP-0002 is accepted, the various Brightway packages will be maintained a
 
 Pros: Uniform formatting and structure across the changelog files of all Brightway packages. Improved readability, improved accountability of developers. Improved accessibility by end-users.
 
-Cons: None
+Cons: None (!)
 
 ### Alternatives
 
-Maintain status quo, include changelogs in the documentation but without a common naming and formatting convention.
+Maintain status quo, inconsistently include changelogs in the documentation but without a common naming and formatting convention.
 
 ### Open Issues
 
@@ -109,12 +113,12 @@ N/A
 
 ### Test plan and results
 
-The prototype of [documentation.brightway.dev](https://documentation.brightway.dev/) already contains a [`Changelog`](https://documentation.brightway.dev/en/latest/source/5_changelog/0_index.html) sub-page. No further testing is required.
+The Brightway documentation [docs.brightway.dev](https://documentation.brightway.dev/) already pulls `CHANGE.md` files from the sub-packages documented there. No further testing is required.
 
 ## Discussion
 
 * [BEP-0004 Discussion on GitHub](https://github.com/brightway-lca/enhancement-proposals/discussions/26)
-*  The [Gitter `documentation` channel](https://gitter.im/brightway-lca/documentation)
+*  ~~The [Gitter `documentation` channel](https://gitter.im/brightway-lca/documentation)~~ (now defunct)
 * The Brightway development discussion list, tagged with [#BEP0004]
 * Issues in the respective repositories:
    - [brightway-lca/brightway-documentation](https://github.com/brightway-lca/brightway-documentation/issues/13)
@@ -124,4 +128,5 @@ The prototype of [documentation.brightway.dev](https://documentation.brightway.d
  - [Version 1](https://github.com/brightway-lca/enhancement-proposals/blob/2d904c1e457ad589c2e2ea7d2434c7d360989a0f/proposals/0004_changelogs.md)
  - [Version 2](https://github.com/brightway-lca/enhancement-proposals/blob/662bd104ba8c83e313b966a9c5893b2e3c95376a/proposals/0004_changelogs.md)
  - [Version 3](https://github.com/brightway-lca/enhancement-proposals/blob/a3043a12d1e50f27dc7c809ca50e0dd76e909381/proposals/0004_changelogs.md)
- - Version 4 (this version)
+ - [Version 4](https://github.com/brightway-lca/enhancement-proposals/blob/1dee91c89cee39d527cf6a2ad65630f9764fa7b3/proposals/0004_changelogs.md)
+ - Version 5 (this version)
