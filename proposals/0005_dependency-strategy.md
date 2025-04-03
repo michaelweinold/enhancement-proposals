@@ -4,12 +4,103 @@
 | - | - |
 | Number | 5 |
 | Title | Brightway Dependency Management Strategy |
-| Status | Proposed |
+| Status | **Withdrawn** |
 | Type | Guidelines |
 | Proposed By | [Michael Weinold](mailto:dev@weinold.ch) |
 | Created | 2023-08-01 |
-| Last updated | 2023-12-13 |
-| Version | 2 |
+| Last updated | 2025-04-13 |
+| Version | 3 |
+
+This proposal has been withdrawn. This is because Brightway has many, many, many dependencies[1] and only a very limited number of contributors with the expertise or interest in platform-specific dependency management. Development is (unpythonically, for historical and pragmatic reasons) spread out across multiple repositories (see stale `BEP0002`) and running Brightway in a WebAssembly environment is not a priority for any contributors/maintainers. While https://webapp.brightway.dev and https://live.brightway.dev are a testament to the enthusiasm of the authors, such applications will remain a novelty for the forseeable future.
+
+[1] A list of `brightway25==1.1.0` dependencies:
+
+1. annotated-types
+2. asteval
+3. astunparse
+4. blinker
+5. brightway25
+6. brotli
+7. bw2analyzer
+8. bw2calc
+9. bw2data
+10. bw2io
+11. bw2parameters
+12. bw_migrations
+13. bw_processing
+14. bw_simapro_csv
+15. certifi
+16. charset-normalizer
+17. contourpy
+18. cycler
+19. deepdiff
+20. deprecated
+21. ecoinvent_interface
+22. et-xmlfile
+23. flexcache
+24. flexparser
+25. fonttools
+26. fsspec
+27. ftfy
+28. idna
+29. inflate64
+30. kiwisolver
+31. loguru
+32. lxml
+33. matrix_utils
+34. matplotlib
+35. morefs
+36. mrio_common_metadata
+37. multifunctional
+38. multivolumefile
+39. numpy
+40. openpyxl
+41. ordered-set
+42. packaging
+43. pandas
+44. peewee
+45. pillow
+46. pint
+47. platformdirs
+48. psutil
+49. py7zr
+50. pybcj
+51. pycryptodomex
+52. pydantic
+53. pydantic-core
+54. pydantic-settings
+55. pyecospold
+56. pyparsing
+57. pyppmd
+58. python-dateutil
+59. python-dotenv
+60. pytz
+61. pyxlsb
+62. pyzstd
+63. randonneur
+64. randonneur_data
+65. rapidfuzz
+66. rdflib
+67. requests
+68. scipy
+69. six
+70. snowflake-id
+71. SPARQLWrapper
+72. stats_arrays
+73. structlog
+74. tabulate
+75. texttable
+76. tqdm
+77. typing_extensions
+78. typing-inspection
+79. tzdata
+80. urllib3
+81. voluptuous
+82. wcwidth
+83. wheel
+84. wrapt
+85. xlrd
+86. xlsxwriter
 
 ## Abstract
 
@@ -66,4 +157,5 @@ N/A
 ## Previous Versions
 
 - Version 1 (unpublished, part of [PR#29](https://github.com/brightway-lca/enhancement-proposals/pull/29))
-- Version 2 (this version)
+- Version 2 (unpublished)
+- Version 3 (this version, withdrawn)

@@ -4,7 +4,7 @@
 | - | - |
 | Number | 4 |
 | Title | Changelogs for Brightway Packages |
-| Status | Accepted |
+| Status | Proposed |
 | Type | Guidelines |
 | Proposed By | [Michael Weinold](mailto:dev@weinold.ch) |
 | Editor | [Tomas Navarrete Gutierrez](mailto:tomas.navarrete@list.lu) |
